@@ -5,8 +5,8 @@ from app.models import Actor
 
 class ActorManager():
     def __init__(self) -> None:
-        self.db_name = "db_name"
-        self.table_name = "table_name"
+        self.db_name = "test_db"
+        self.table_name = "TABLE_NAME"
         self._connection = sqlite3.connect(f"{self.db_name}")
 
     def create(self, first_name: str, last_name: str) -> None:
