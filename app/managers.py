@@ -14,7 +14,7 @@ class ActorManager():
             f"INSERT INTO {self.table_name} (first_name, last_name) VALUES (?, ?)",
             (first_name, last_name)
         )
-        self._connection.execute()
+        self._connection.commit()
 
     def all(self) -> list:
         actor_manager_cursor = self._connection.execute(
